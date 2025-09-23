@@ -1,0 +1,33 @@
+
+Minimal payload (required fields)
+{
+  "username": "alice",
+  "email": "alice@example.com"
+}
+
+
+
+Full payload (including optional field)
+{
+  "username": "alice",
+  "email": "alice@example.com",
+  "fullName": "Alice Smith"
+}
+
+
+{
+  "username": "bob",
+  "email": "bob@example.com",
+  "fullName": "Bob Johnson"
+}
+
+
+Note:
+Data storage uses a ConcurrentDictionary<int, User> for thread-safe in-memory storage.
+Endpoints:
+POST /users → create a user
+GET /users → list all users
+GET /users/{id} → get a user by id
+PUT /users/{id} → update a user
+DELETE /users/{id} → delete a user
+GET /health → health check
